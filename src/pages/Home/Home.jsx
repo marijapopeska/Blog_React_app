@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Header from '../../components/Header/Header'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import Blogs from '../../components/Blogs/Blogs'
+import EmptyList from '../../components/EmptyList/EmptyList'
 
 import { allBlogs } from '../../config/blogs'
 
@@ -36,7 +37,7 @@ const Home = () => {
 				clearSearch={clearSearch}
 				value={searchTerm}
 			/>
-			<Blogs blogs={blogs} /> 
+			{blogs.length > 0 ? <Blogs blogs={blogs} /> : <EmptyList />}
 		</>
 	)
 }
