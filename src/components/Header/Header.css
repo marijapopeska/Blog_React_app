@@ -1,0 +1,28 @@
+body {
+    font-family: Roboto;
+}
+
+.header{
+    text-align: center;
+}
+
+.header h2 {
+    color: #0c69c6;
+    font-size: 26px;
+}
+
+.header h1 {
+    font-size: 50px;
+    color: #0f52ba;
+    margin-bottom: 1rem;
+}
+
+.header h1 span {
+    color: #3c5589;
+}
+
+.header p {
+    color: #515151;
+    font-weight: 500;
+    font-size: 20px;
+}
