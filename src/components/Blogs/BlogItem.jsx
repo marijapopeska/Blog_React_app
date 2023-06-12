@@ -12,7 +12,7 @@ const BlogItem = ({
 	id
 }) => {
 	return (
-		<div className='blog-item'>
+		<a className='blog-item' href={`/blog/${id}`}>
 			<img
 				className='blog-item-cover'
 				src={cover}
@@ -32,9 +32,9 @@ const BlogItem = ({
 						<p>{createdAt}</p>
 					</div>
 				</div>
-				<a className='blog-item-link' href={`/blog/${id}`}> → </a>
+				{/* <a className='blog-item-link' href={`/blog/${id}`}> → </a> */}
 			</footer>
-		</div>
+		</a>
 	)
 }
 
