@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect  } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 import { allBlogs } from '../../config/blogs'
 
 import CategoryLabel from '../CategoryLabel/CategoryLabel'
-
+import EmptyList from '../../components/EmptyList/EmptyList'
 
 import '../Blog/Blog.css'
 
@@ -18,33 +18,35 @@ const Blog = () => {
         if (blog) {
             setBlog(blog)
         }
-    }, [id])
+    }, [])
 
     return (
-        <div>
+        <>
             <Link className='blog-goBack' to='/'>
                 <span>&#8592;</span><span>Back</span>
             </Link>
 
-            <div className='blog-wrap'>
-                <header>
-                    <p className='blog-data'>Published {blog.createdAt}</p>
-                    <h1>{blog.title}</h1>
+            {
+                blog ?
+                    <div className='blog-wrap'>
+                        <header>
+                            <p className='blog-data'>Published {blog.createdAt}</p>
+                            <h1>{blog.title}</h1>
 
-                    <div className='blog-subCategory'>
-                        {blog.subCategory.map((category) => (
-                            <div key={category}>
-                                <CategoryLabel label={category} />
+                            <div className='blog-subCategory'>
+                                {blog.subCategory.map((category) => (
+                                    <div key={category}>
+                                        <CategoryLabel label={category} />
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </header>
+                        </header>
 
-                <img src={blog.cover} alt='cover' />
-                <p className='blog-desc'>{blog.description}</p>
-            </div>
-
-        </div>
+                        <img src={blog.cover} alt='cover' />
+                        <p className='blog-desc'>{blog.description}</p>
+                    </div> : <EmptyList/>
+            }
+        </>
     )
 }
 
