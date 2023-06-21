@@ -4,6 +4,8 @@
     margin: 2.5rem auto 4rem auto;
     padding: 0.5rem;
     border-radius: 5px;
+    
+
 }
 
 .searchBar form {
@@ -15,12 +17,14 @@
     background-color: #f0f0f0;
     outline: none;
     border: none;
+    font-family: Roboto;
+    /* Specify Roboto as the first choice */
+
 }
 
 .searchBar span {
     padding-right: 0.5rem;
     cursor: pointer;
-    font-family: sans-serif;
 }
 
 .searchBar button {
@@ -30,4 +34,5 @@
     border-radius: 5px;
     background-color: #0f52ba;
     color: #fff;
+    font-family: Roboto;
 }

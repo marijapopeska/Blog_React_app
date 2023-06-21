@@ -12,7 +12,7 @@ const SearchBar = ({ onSubmit, onChange, clearSearch, value }) => {
           placeholder='Search By Category'
         />
         {value.length > 0 ? <span onClick={clearSearch}>X</span> : null}
-        <button>Seach</button>
+        <button>Search</button>
       </form>
     </div>
   )
