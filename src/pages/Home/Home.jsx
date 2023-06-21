@@ -5,7 +5,11 @@ import SearchBar from '../../components/SearchBar/SearchBar'
 import Blogs from '../../components/Blogs/Blogs'
 import EmptyList from '../../components/EmptyList/EmptyList'
 
+
 import { allBlogs } from '../../config/blogs'
+
+import '../../pages/Home/Home.css'
+
 
 const Home = () => {
 	const [blogs, setBlogs] = useState(allBlogs)
